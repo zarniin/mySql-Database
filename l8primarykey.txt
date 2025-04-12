@@ -78,11 +78,37 @@
 		DESC persons;
 
 	=> Method 1 
-		ALTER TABLE persons 
+		ALTER TABLE workers (tablename)
 		ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 
 	=> Method 2 
-		ALTER TABLE persons 
+		ALTER TABLE tablename 
 		ADD COLUMN id INT NULL AUTO_INCREMENT FIRST,
 		ADD PRIMARY KEY (id);
+
+	=> Exercise (DROP COLUMN)
+		ALTER TABLE workers 
+		DROP COLUMN id; 
+
+		SHOW INDEX FROM workers
+
+
+	--------------------------------------------------------------------
+
+	=> DROP PRIMARY KEY 
+
+		DESC workers; 
+		SHOW INDEX FROM workers;
+
+		*ERROR = we need to remove auto increment 
+		ALTER TABLE workers DROP PRIMARY KEY;
+
+		=> MODIFY 
+			ALTER TABLE workers MODIFY id INT NOT NULL; 
+			ALTER TABLE workers DROP PRIMARY KEY;
+
+			DESC workers;
+			SHOW INDEX FROM workers; 
+
+	--------------------------------------------------------------------
 
