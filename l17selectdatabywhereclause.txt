@@ -1,0 +1,31 @@
+=> Select Data By Using WHERE Clause 
+
+	Syntax 
+
+		SELECT * FROM tablename 
+		WHERE condition;
+
+		SELECT column1,column2,column3 FROM tablename 
+		WHERE condition;
+
+	------------------------------------------------------------------------------------
+
+	Exercise 
+
+		SELECT * FROM persons;
+
+		SELECT * FROM persons 
+		WHERE city = "mandalay";
+
+		SELECT * FROM persons;
+
+		SELECT * FROM persons 
+		WHERE city = "Mandalay";
+
+		SELECT firstname,lastname,city persons 
+		WHERE city = "yangon";
+
+		SELECT firstname,lastname,city persons 
+		WHERE city LIKE "yangon";
+
+	-------------------------------------------------------------------------------------

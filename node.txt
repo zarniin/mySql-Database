@@ -35,8 +35,6 @@ Mysql (My Structure Query Language)
 			(2).(R(read) => INSERT INTO (database/table) => SELECT (read) / 
 			(3).(U(update) => UPDATE / 
 			(4).(D(delete) => DELETE)
-			
-	L2createdatabase.txt
 
 
 
